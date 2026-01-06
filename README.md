@@ -14,7 +14,7 @@ explanations
 
 ------------------------------------------------------------------------
 
-## Œ Features
+## Features
 
 -   Loads a symptom-to-disease dataset\
 -   Generates embeddings for symptom descriptions\
