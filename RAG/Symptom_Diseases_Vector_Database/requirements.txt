@@ -1,3 +1,0 @@
-chromadb==1.4.0
-pandas==2.3.3
-sentence-transformers==5.2.0
