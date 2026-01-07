@@ -8,6 +8,9 @@ An AI-powered travel planner that helps you:
 
 This project demonstrates a **multi-agent system** approach, where different agents handle specific tasks and cooperate to provide a complete travel plan.
 
+
+<img width="877" height="890" alt="Καταγραφή" src="https://github.com/user-attachments/assets/d64f0280-dc51-4747-a3fd-83a136faeb2e" />
+
 ---
 
 ## Multi-Agent Architecture
@@ -46,9 +49,9 @@ The itinerary generation uses **LLaMA 2 7B Chat (quantized GGUF)**. This model m
 2. Accept Meta's license for LLaMA 2.
 
 ### Step 2: Get your Hugging Face token
-1. Go to [Settings → Access Tokens](https://huggingface.co/settings/tokens)  
-2. Click **New token** → set role to **Read**  
-3. Copy the token (you’ll need it for the CLI)
+1. Go to [Settings â†’ Access Tokens](https://huggingface.co/settings/tokens)  
+2. Click **New token** â†’ set role to **Read**  
+3. Copy the token (youâ€™ll need it for the CLI)
 
 ### Step 3: Install the Hugging Face CLI
 ```bash
@@ -101,8 +104,8 @@ The app will show:
 
 ## Notes
 
-- The system is modular — you can replace or add agents (e.g., flights, attractions) easily  
-- LLaMA 7B requires **~8–10 GB RAM**; smaller quantized models are recommended for CPU  
+- The system is modular â€” you can replace or add agents (e.g., flights, attractions) easily  
+- LLaMA 7B requires **~8â€“10 GB RAM**; smaller quantized models are recommended for CPU  
 - API keys or sensitive info should **never** be committed  
 
 ---
@@ -113,5 +116,5 @@ This project is for educational and experimental purposes.
 
 ---
 
-�
+¨
 
