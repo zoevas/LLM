@@ -13,13 +13,20 @@ destination = st.text_input("Enter your destination (e.g., Rome):", "Rome")
 preferences = st.text_area("Describe your ideal hotel:", "Luxury hotel in city center with spa.")
 duration = st.slider("Trip duration (days):", 1, 14, 5)
 
+class BaseAgent:
+    def __init__(self, name):
+        self.name = name
+        self.memory = []
 
+    def remember(self, data):
+        self.memory.append(data)
 
 # -------------------------------
 # AI Models for Travel Planning
 # -------------------------------
-class WeatherAnalysisAgent:
+class WeatherAnalysisAgent(BaseAgent):
     def __init__(self):
+        super().__init__("WeatherAgent")
         self.model = RandomForestRegressor(n_estimators=100)
 
     def train(self, historical_data):
@@ -41,11 +48,10 @@ historical_weather_data = [
 
 # is a hotel recommendation system that utilizes semantic similarity to
 # match hotels with user preferences
-class HotelRecommenderAgent:
+class HotelRecommenderAgent(BaseAgent):
     def __init__(self):
-        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
-        self.hotels_db = []
-        self.hotels_embeddings = None
+        super().__init__("HotelAgent")
+        self.encoder = SentenceTransformer("all-MiniLM-L6-v2")
 
     def add_hotels(self, hotels):
         self.hotels_db = hotels
@@ -56,6 +62,16 @@ class HotelRecommenderAgent:
         pref_embedding = self.encoder.encode([preferences])
         similarities = np.dot(self.hotels_embeddings, pref_embedding.T).flatten()
         top_indices = similarities.argsort()[-top_k:][::-1]
+
+        ranked_hotels = [
+            {
+                **self.hotels_db[i],
+                "score": float(similarities[i])
+            }
+            for i in top_indices
+        ]
+
+        self.remember(ranked_hotels)
         return [{**self.hotels_db[i], 'score': float(similarities[i])} for i in top_indices]
 
 weather_agent = WeatherAnalysisAgent()
@@ -84,18 +100,30 @@ class ItineraryPlannerAgent:
 
     def create_itinerary(self, destination, best_month, hotel, duration):
         prompt = f"""
+    You are an expert travel planner.
+
+    STRICT RULES:
+    - Output plain text only
+    - Do NOT write code
+    - Do NOT repeat instructions
+    - Do NOT include templates or placeholders
+    - Do NOT include explanations
+    - Start directly with Day 1
+
+    Task:
             You are an expert travel planner.
 
             Create a {duration}-day travel itinerary for {destination}
             during the best month: {best_month}.
             Recommended hotel: {hotel['name']}.
 
-            Return a clear day-by-day plan.
-        """
+            Return a clear day-by-day plan and include morning, midday, and afternoon plan.
+    """
 
         response = self.llm(
             prompt,
-            max_tokens=300,
+            max_tokens=500,
+            temperature=0.7,
             stop=["</s>"]
         )
 
