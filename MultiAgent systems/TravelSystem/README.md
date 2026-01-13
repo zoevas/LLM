@@ -52,8 +52,8 @@ The itinerary generation uses **LLaMA 2 7B Chat (quantized GGUF)**. This model m
 2. Accept Meta's license for LLaMA 2.
 
 ### Step 2: Get your Hugging Face token
-1. Go to [Settings â†’ Access Tokens](https://huggingface.co/settings/tokens)  
-2. Click **New token** â†’ set role to **Read**  
+1. Go to [Settings Access Tokens](https://huggingface.co/settings/tokens)  
+2. Click **New token** set role to **Read**  
 3. Copy the token (youâ€™ll need it for the CLI)
 
 ### Step 3: Install the Hugging Face CLI
