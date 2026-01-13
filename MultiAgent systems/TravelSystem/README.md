@@ -18,8 +18,11 @@ This project demonstrates a **multi-agent system** approach, where different age
 | Agent | Responsibility |
 |-------|----------------|
 | `WeatherAnalysisAgent` | Predicts the best months to visit using historical weather data |
-| `HotelRecommenderAgent` | Finds hotels that match user preferences using semantic embeddings |
+| `HotelAgent` | Finds hotels that match user preferences using semantic embeddings |
 | `ItineraryPlannerAgent` | Generates a complete travel itinerary using LLaMA |
+| `SupervisorAgent` | Orchestrates the three aforementioned agents |
+
+The Supervisor multiagent architecture was adopted.
 
 ---
 
