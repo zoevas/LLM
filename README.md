@@ -55,19 +55,22 @@ python SymptomToDiseaseLangchain.py
 
 ```
 RAG/
-Symptom_Diseases_Vector_Database/
- data/
-  Symptom2Disease.csv
-  SymptomToDisease.py
-  SymptomToDiseaseLangchain.py
-  SymptomToDiseaseWithAgents.py
-  README.md
- MultiAgent systems/
-  TravelSystem/
-    Multimodal_Travel_Planning_Supervisor_pattern.py
-	README.md
-README.md
-requirements.txt
+β”β”€β”€ Symptom_Diseases_Vector_Database/
+β”‚   β”β”€β”€ data/
+β”‚   β”‚   β””β”€β”€ Symptom2Disease.csv
+β”‚   β”β”€β”€ SymptomToDisease.py
+β”‚   β”β”€β”€ SymptomToDiseaseLangchain.py
+β”‚   β”β”€β”€ SymptomToDiseaseWithAgents.py
+β”‚   β””β”€β”€ README.md
+β”β”€β”€ MultiAgent_Systems/
+β”‚   β””β”€β”€ TravelSystem/
+β”‚       β”β”€β”€ Multimodal_Travel_Planning_Supervisor_pattern.py
+β”‚       β””β”€β”€ README.md
+β”β”€β”€ README.md
+β””β”€β”€ requirements.txt
+```
+
+
 ```
 
 ## Notes
