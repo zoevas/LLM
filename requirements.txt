@@ -4,3 +4,5 @@ sentence-transformers==5.2.0
 scikit-learn==1.8.0
 llama-cpp-python==0.3.16
 streamlit==1.52.2
+langchain==1.2.6
+langchain-community==1.0.0a1
