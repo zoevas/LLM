@@ -69,13 +69,17 @@ ollama run llama3
 
 ```
 
-------------------------------------------------------------------------
 
-##  Files
+---
 
-SymptomToDisease.py It uses simply RAG for finding similar diseases in databases
-SymptomToDiseaseLangchain.py  It performs the same opration but with langchain and using memory for oremembering similar prompts in the past
-SymptomToDiseaseWithAgents.py It performs the same opration but using an agent and using memory for oremembering similar prompts in the past
+## Files
+
+| File | Description |
+|------|-------------|
+| `SymptomToDisease.py` | Basic RAG pipeline for finding similar diseases in a database. |
+| `SymptomToDiseaseLangchain.py` | RAG pipeline using LangChain with memory to remember past prompts. |
+| `SymptomToDiseaseWithAgents.py` | RAG pipeline using a LangChain agent with memory for dynamic reasoning and prompt recall. |
+
 
 ------------------------------------------------------------------------
 
