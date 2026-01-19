@@ -57,7 +57,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ### 3. Install dependencies
 
 ``` bash
-pip install chromadb pandas sentence-transformers requests
+pip install chromadb pandas sentence-transformers requests langchain langchain-community
 ```
 
 ### 4. Install & run Ollama
@@ -66,7 +66,16 @@ Ensure Ollama is installed and running:
 
 ``` bash
 ollama run llama3
+
 ```
+
+------------------------------------------------------------------------
+
+##  Files
+
+SymptomToDisease.py It uses simply RAG for finding similar diseases in databases
+SymptomToDiseaseLangchain.py  It performs the same opration but with langchain and using memory for oremembering similar prompts in the past
+SymptomToDiseaseWithAgents.py It performs the same opration but using an agent and using memory for oremembering similar prompts in the past
 
 ------------------------------------------------------------------------
 
@@ -94,7 +103,7 @@ ollama run llama3
 Run the script:
 
 ``` bash
-python main.py
+python SymptomToDisease_*.py
 ```
 
 Example symptom query inside the script:
@@ -102,4 +111,3 @@ Example symptom query inside the script:
 ``` python
 query = "I have fever, headache, and muscle pain"
 ```
-
