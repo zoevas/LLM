@@ -29,7 +29,7 @@ This repository contains small projects and experiments based on **Large Languag
 
 ## Running the Projects
 
-Run the main script or individual project files:
+Run the individual project files:
 
 ```
 # Navigate to the project folder
@@ -41,13 +41,7 @@ cd MultiAgent_Systems
 python SymptomToDiseaseLangchain.py
 
 > Adjust the filename depending on which project version you want to run.
-
 ```
-
-
-```
-
-(Adjust the filename depending on the project you want to run.)
 
 ---
 
@@ -55,23 +49,21 @@ python SymptomToDiseaseLangchain.py
 
 ```
 RAG/
-β”β”€β”€ Symptom_Diseases_Vector_Database/
-β”‚   β”β”€β”€ data/
-β”‚   β”‚   β””β”€β”€ Symptom2Disease.csv
-β”‚   β”β”€β”€ SymptomToDisease.py
-β”‚   β”β”€β”€ SymptomToDiseaseLangchain.py
-β”‚   β”β”€β”€ SymptomToDiseaseWithAgents.py
-β”‚   β””β”€β”€ README.md
-β”β”€β”€ MultiAgent_Systems/
-β”‚   β””β”€β”€ TravelSystem/
-β”‚       β”β”€β”€ Multimodal_Travel_Planning_Supervisor_pattern.py
-β”‚       β””β”€β”€ README.md
-β”β”€β”€ README.md
-β””β”€β”€ requirements.txt
+ Symptom_Diseases_Vector_Database/
+ data/
+  Symptom2Disease.csv
+  SymptomToDisease.py
+  SymptomToDiseaseLangchain.py
+  SymptomToDiseaseWithAgents.py
+  README.md
+MultiAgent_Systems/
+ TravelSystem/
+ Multimodal_Travel_Planning_Supervisor_pattern.py
+ README.md
+README.md
+ requirements.txt
 ```
 
-
-```
 
 ## Notes
 
